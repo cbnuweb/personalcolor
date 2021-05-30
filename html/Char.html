@@ -18,6 +18,45 @@
 
   </style>
 
+  <script>
+    function select(id){
+      var seasonid=id.getAttribute('id');
+      var seasondiv=document.getElementById(seasonid+"_div");
+      var season=document.getElementById(seasonid);
+
+      var sprdiv = document.getElementById("spr_div");
+      var sumdiv = document.getElementById("sum_div");
+      var autdiv = document.getElementById("aut_div");
+      var windiv = document.getElementById("win_div");
+
+      if(seasonid=='spr'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        autdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='sum'){
+        seasondiv.style.display = 'block';
+        sprdiv.style.display='none';
+        autdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='aut'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        sprdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='win'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        autdiv.style.display='none';
+        sprdiv.style.display='none';
+      }
+    }
+
+  </script>
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
@@ -45,46 +84,40 @@
     </div>
   </nav>
 
-  <!-- content div -->
+  <!-- content div-->
   <div class="container-fluid">
     <div class="content">
-
-      <!-- section4 -->
-      <section class="page-section" id="section4">
-
-        <!-- section4 title -->
+      <!-- section5 -->
+      <section class="page-section" id="section5">
+        <!-- section5 title -->
         <div class="section_title">
-          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
-          <h3 class="section-subheading text-muted">Find your personal color type</h3>
+          <h2 class="section-heading text-uppercase">Personal Color Characteristics</h2>
+          <h3 class="section-subheading text-muted">Check your personal color characteristics</h3>
         </div>
-
-        <!-- section4 content -->
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="../img/photograph.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by cam</a>
-            </div>
+        <div class="section5_btn">
+          <button type="button" name="button" id="spr" onclick="select(this);">SPRING</button>
+          <button type="button" name="button" id="sum" onclick="select(this);">SUMMER</button>
+          <button type="button" name="button" id="aut" onclick="select(this);">FALL</button>
+          <button type="button" name="button" id="win" onclick="select(this);">WINTER</button>
+        </div>
+        <!-- section5 content -->
+        <div class="section5_content">
+          <div id="spr_div">
+            spring <br>
+            <img src="../img/1.png" style="width: 200px; height: 200px; text-align: center; ">
           </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/picture.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by image</a>
-            </div>
+          <div id="sum_div" style="display:none;">
+            summer <br>
+            <img src="../img/2.png" style="width: 200px; height: 200px; text-align: center;">
           </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/exam.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by survey</a>
-            </div>
+          <div id="aut_div" style="display:none;">
+            autumn <br>
+            <img src="../img/3.png" style="width: 200px; height: 200px; text-align: center;">
           </div>
-
+          <div id="win_div" style="display:none;">
+            winter <br>
+            <img src="../img/4.png" style="width: 200px; height: 200px; text-align: center;">
+          </div>
         </div>
       </section>
     </div>

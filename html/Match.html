@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>P-Color MainPage</title>
+  <title>P-Color MatchingPage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -15,8 +15,32 @@
   <link  rel="stylesheet" href="../css/bootstyle.css" >
 
   <style media="screen">
+    .circle{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 70%;
+      overflow: hidden;
+    }
+
 
   </style>
+
+  <script>
+    navigator.mediaDevices.getUserMedia({
+      video:{
+        width: 180,
+      }
+    }).then(stream=>{
+      document.getElementById("vid").srcObject = stream;
+    })
+
+
+  </script>
+
 
 </head>
 
@@ -45,47 +69,43 @@
     </div>
   </nav>
 
-  <!-- content div -->
+
+
+  <!-- content div-->
   <div class="container-fluid">
     <div class="content">
+      <!-- section6 -->
+      <section class="page-section" id="section6">
 
-      <!-- section4 -->
-      <section class="page-section" id="section4">
-
-        <!-- section4 title -->
+        <!-- section6 title -->
         <div class="section_title">
-          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
-          <h3 class="section-subheading text-muted">Find your personal color type</h3>
+          <h2 class="section-heading text-uppercase">Personal Color Matching</h2>
+          <h3 class="section-subheading text-muted">Match color by personal color type</h3>
         </div>
 
-        <!-- section4 content -->
+        <!-- section6 content-->
         <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="../img/photograph.png" alt="cam" class="section4_image img-resonsive">
+          <div class="col-md-8">
+
+            <div class="section6_camera">
+              <div class="circle">
+                <video id="vid" style="width: 200px; height: 200px; object-fit: cover;" autoplay></video>
+              </div>
             </div>
-            <div class="section4_p">
-              <a href="#">test by cam</a>
+
+            <div class="section6_cloth">
+              <img src="../img/cloth.png" alt="cloth" class="img-responsive">
             </div>
+
           </div>
+
           <div class="col-md-4">
-            <div>
-              <img src="../img/picture.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by image</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/exam.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by survey</a>
-            </div>
+            <h1>팔레트부분</h1>
+            <img class="img-responsive" src="../img/1.png" alt="spring" />
           </div>
 
         </div>
+
       </section>
     </div>
   </div>
