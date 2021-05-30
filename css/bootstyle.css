@@ -2,6 +2,7 @@ body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
+    /* font-family: cutefont; */
 }
 
 h2 {
@@ -40,12 +41,21 @@ label{
   font-weight: normal;
 }
 
+nav .container-fluid{
+  margin-top: 10px;
+}
+
 .container-fluid {
   padding:0;
   text-align: center;
 }
 
 .container{
+}
+
+.content{
+  width:70%;
+  margin:0 auto;
 }
 
 
@@ -106,9 +116,8 @@ label{
   padding: 6rem;
 }
 
-.content{
-  width:80%;
-  margin:0 auto;
+.section_title{
+  padding-bottom: 5rem;
 }
 
 #section1{
@@ -117,23 +126,15 @@ label{
   word-break:break-all;
 }
 
-.section1_title{
-    padding-bottom: 5rem;
-}
-
-.section1_content{
-  border:1px solid red;
-  margin:auto 0;
-}
-
 #section1_content_p{
   padding:3rem;
   text-align: left;
 }
 
-/* #section2{
-  background-color:#FFF5EE;
-} */
+#section2{
+  text-align:center;
+  word-break:break-all;
+}
 
 #section2 .portfolio-item {
   max-width: 16rem;
@@ -142,7 +143,14 @@ label{
 }
 
 #section3{
+  text-align:center;
+  word-break:break-all;
   background-color:	#F8F8FF;
+}
+
+#section4{
+  text-align:center;
+  word-break:break-all;
 }
 
 footer{
@@ -151,30 +159,38 @@ footer{
 
 #footer{
   padding:0 3rem 3rem 3rem;
+  margin
 }
 
 .navbar {
     width:100%;
-    margin-bottom: 0;
-    background-color:#FA8072;
-    z-index: 9999;
+    margin:0;
     border: 0;
-    font-size: 12px !important;
+    background-color:#FA8072;
+    color:#ffffff;
+    z-index: 9999;
+    font-size: 15px !important;
 
     letter-spacing: 4px;
     border-radius: 0;
     letter-spacing: 0.0625em;
     text-transform: uppercase;
-    /* font-family: Montserrat, sans-serif; */
 }
 
 .navbar li a{
-    color: #fff !important;
+    color: #ffffff !important;
+}
+
+
+.navbar-nav{
+    margin-top:5px;
+    padding-left: 20px;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-    color: #ffc800 !important;
+  background-color:#FA8072;
+  color: red !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -182,7 +198,9 @@ footer{
     color: #fff !important;
 }
 
-
+#myNavbar{
+  padding-right: 20px;
+}
 
 .slideanim {
     visibility: hidden;
@@ -219,3 +237,8 @@ footer{
         -webkit-transform: translateY(0%);
     }
 }
+/*
+@font-face{
+  font-family:'cutefont';
+  src:url(../font/cutefont.ttf) format('truetype');
+} */
