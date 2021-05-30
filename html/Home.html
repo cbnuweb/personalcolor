@@ -12,37 +12,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-   <link  rel="stylesheet" href="bootstyle.css" >
+  <link  rel="stylesheet" href="../css/bootstyle.css" >
 
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
+
 
   <!-- nav div -->
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <img style="margin-left: -20px;" src="img/logo.png" width=35%></img>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold;">
-            <li><a href="Home.html">Our <br> Page Name<br></a></li>
-            <li><a href="Recipe.html">Personal Color<br>TEST</a></li>
-            <li><a href="ExpirationDate.html">Personal color<br>CHARACTERISTICS</a></li>
-            <li><a href="Chatbot.html">Personal color<br>CHARACTERISTICS</a></li>
-            <li><a href="NearMarket.html">Personal color<br>MATCHING</a></li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../img/logo.png" width=40%></img>
       </div>
-    </nav>
-  </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+          <li><a href="Home.html">Color <br> Palette<br></a></li>
+          <li><a href="">Personal Color<br>TEST</a></li>
+          <li><a href="">Personal color<br>CHARACTERISTICS</a></li>
+          <li><a href="">Personal color<br>MATCHING</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 
   <!-- carousel div -->
   <div id="myCarousel" class="container-fluid carousel slide text-center" data-ride="carousel">
@@ -58,16 +56,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img class="img-responsive" style="margin: auto; weight:100%;" src="img/spring.png"/>
+        <img class="img-responsive" style="margin: auto; weight:100%;" src="../img/spring.png"/>
       </div>
       <div class="item">
-        <img class="img-responsive" style="margin: auto; weight:100%;" src="img/summer.png"/>
+        <img class="img-responsive" style="margin: auto; weight:100%;" src="../img/summer.png"/>
       </div>
       <div class="item">
-        <img class="img-responsive" style="margin: auto; weight:100%;" src="img/fall.png"/>
+        <img class="img-responsive" style="margin: auto; weight:100%;" src="../img/fall.png"/>
       </div>
       <div class="item">
-        <img class="img-responsive" style="margin: auto; weight:100%;" src="img/winter.png"/>
+        <img class="img-responsive" style="margin: auto; weight:100%;" src="../img/winter.png"/>
       </div>
     </div>
 
@@ -82,115 +80,97 @@
     </a>
   </div>
 
-  <!-- content div-->
-  <div class="container-fluid content">
 
-    <!-- section1 -->
-    <section class="page-section" id="section1">
+
+  <!-- content div-->
+  <div class="container-fluid">
+    <div class="content">
+      <!-- section1 -->
+      <section class="page-section" id="section1">
         <!-- section1 title -->
-        <div class="section1_title">
+        <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color</h2>
           <h3 class="section-subheading text-muted">A brief description of personal color.</h3>
         </div>
         <!-- section1 content -->
-        <div class="row" class="section1_content">
+        <div class="row">
           <div class="col-md-6">
-            <img class="img-responsive" src="img/color.png" alt="color">
+            <img class="img-responsive" src="../img/color.png" alt="color">
           </div>
           <div class="col-md-6" id="section1_content_p">
             <h2>What is personal Color?</h2>
             <p>Personal Color has two meanings. <br><b>First</b>, it means the color of the body that an individual has since birth. It usually shows the color of the skin, hair, and eyes. <br><b>Second</b>, means the color that best matches the skin and hair of the individual and the eye color. Individuals have different unique colors, so they can distinguish between colors that suit them or not.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- second section -->
-    <section class="page-section" id="section2">
-      <div class="">
-        <div class="text-center">
+      <!-- section2 -->
+      <section class="page-section" id="section2">
+        <!-- section2 title -->
+        <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color 4type</h2>
           <h3 class="section-subheading text-muted">Four types of personal colors.</h3>
         </div>
+        <!-- Portfolio item 2 -->
         <div class="row">
-          <div class="col-lg-6 ">
-            <!-- Portfolio item 1-->
-            <div class="section2-item">
-              <img class="img-fluid" src="img/1.png" alt="..." />
-              <div class="section2-caption">
-                <div class="section2-caption-heading">Spring Warm</div>
-                <div class="section2-caption-subheading text-muted">Illustration</div>
-              </div>
-            </div>
+          <!-- Portfolio item 1-->
+          <div class="col-md-6 ">
+            <img class="img-responsive" src="../img/1.png" alt="spring" />
+            <p>Spring Warm</p>
           </div>
-          <div class="col-lg-6 mb-lg-0">
-            <!-- Portfolio item 2-->
-            <div class="section2-item">
-              <img class="img-fluid" src="img/2.png" alt="..." />
-              <div class="section2-caption">
-                <div class="section2-caption-heading">Summer Cool</div>
-                <div class="section2-caption-subheading text-muted">Graphic Design</div>
-              </div>
-            </div>
+          <!-- Portfolio item 2-->
+          <div class="col-md-6">
+            <img class="img-responsive" src="../img/2.png" alt="summer" />
+            <p>Summer Cool</p>
           </div>
-          <div class="col-lg-6">
-            <!-- Portfolio item 3-->
-            <div class="section2-item">
-              <img class="img-fluid" src="img/3.png" alt="..." />
-              <div class="section2-caption">
-                <div class="section2-caption-heading">Autumn Warm</div>
-                <div class="section2-caption-subheading text-muted">Identity</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <!-- Portfolio item 4-->
-            <div class="section2-item">
-              <img class="img-fluid" src="img/4.png" alt="..." />
-              <div class="section2-caption">
-                <div class="section2-caption-heading">Winter Cool</div>
-                <div class="section2-caption-subheading text-muted">Branding</div>
-              </div>
-            </div>
-          </div>
-
-
         </div>
-      </div>
-    </section>
 
+        <div class="row">
+          <!-- Portfolio item 3-->
+          <div class="col-md-6 ">
+            <img class="img-responsive" src="../img/3.png" alt="fall" />
+            <p>Fall Warm</p>
+          </div>
+          <!-- Portfolio item 4-->
+          <div class="col-md-6">
+            <img class="img-responsive" src="../img/4.png" alt="winter" />
+            <p>Winter Cool</p>
+          </div>
+        </div>
+      </section>
 
-    <section class="page-section" id="section3">
-      <div class="">
-        <div class="text-center">
+      <!-- section3 -->
+      <section class="page-section" id="section3">
+        <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color</h2>
           <h3 class="section-subheading text-muted">A brief description of personal color.</h3>
         </div>
-        <div class="row text-center">
-         <div id="donutchart" style="width: 900px; height: 500px; margin:0 auto;"></div>
+        <div class="row">
+          <div id="donutchart" style="width: 900px; height: 500px; margin:0 auto;"></div>
         </div>
       </section>
     </div>
+  </div>
 
-    <!--footer-->
-    <footer class="container-fluid text-center" id="footer">
-      <a href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-      </a>
-      <br>
-      <div class="row">
-        <div class="col-md-9" style="text-align:left;">
-          <h4>About us</h4>
-          <label><b>Team leader :</b> Cheon Eun-jung</label><br>
-          <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
-          <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
+  <!--footer-->
+  <footer class="container-fluid text-center" id="footer">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br>
+    <div class="row">
+      <div class="col-md-9" style="text-align:left;">
+        <h4>About us</h4>
+        <label><b>Team leader :</b> Cheon Eun-jung</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
+        <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
 
-        </div>
-        <div class="col-md-3" style="text-align:left;">
-            <h4>Contact us</h4>
-            <label><b>Tel :</b> 010-8620-5458</label><br>
-            <label><b>Email :</b> jijking1209@naver.com</label>
-        </div>
+      </div>
+      <div class="col-md-3" style="text-align:left;">
+        <h4>Contact us</h4>
+        <label><b>Tel :</b> 010-8620-5458</label><br>
+        <label><b>Email :</b> jijking1209@naver.com</label>
+      </div>
 
     </footer>
 
@@ -231,6 +211,7 @@
         });
       });
     })
+
     // donutchart
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
@@ -246,16 +227,17 @@
       var options = {
         title: 'Personal Color Distribution Ratio',
         titleTextStyle: {
-        color: '#464646',
-        bold:true,
-        fontSize: 20,
-  },
+          color: '#464646',
+          bold:true,
+          fontSize: 20,
+          fontName : 'cutefont'
+        },
         pieHole: 0.4,
         colors:['#FFC846', '#AECDFF', '#FF9614', '#FF4646'],
-        pieSliceTextStyle: {color: '#FFF0F0', fontSize:20},
+        pieSliceTextStyle: {color: '#FFF0F0', fontSize:20,fontName : 'cutefont'},
         backgroundColor: 'transparent',
-        legend: { textStyle: { color: '#828282',  fontSize: 15, bold:true, } },
-        chartArea: { left: 0, 'width': '80%'},
+        legend: { textStyle: { color: '#828282',  fontSize: 15, bold:true, fontName : 'cutefont'} },
+        chartArea: { left:100, 'width': '100%'},
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
