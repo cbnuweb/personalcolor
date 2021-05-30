@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link  rel="stylesheet" href="bootstyle.css" >
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+   <link  rel="stylesheet" href="bootstyle.css" >
 
 </head>
 
@@ -166,9 +167,7 @@
           <h3 class="section-subheading text-muted">A brief description of personal color.</h3>
         </div>
         <div class="row text-center">
-          <div class=graph>
-            <h1>그래프넣기</h1>
-          </div>
+         <div id="donutchart" style="width: 900px; height: 500px; margin:0 auto;"></div>
         </div>
       </section>
     </div>
@@ -232,6 +231,36 @@
         });
       });
     })
+    // donutchart
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Type', 'People in Korea'],
+        ['Spring Warm', 22],
+        ['Summer Cool', 41.6],
+        ['Autumn Warm', 6.96],
+        ['Winter Cool', 24.9]
+      ]);
+
+      var options = {
+        title: 'Personal Color Distribution Ratio',
+        titleTextStyle: {
+        color: '#464646',
+        bold:true,
+        fontSize: 20,
+  },
+        pieHole: 0.4,
+        colors:['#FFC846', '#AECDFF', '#FF9614', '#FF4646'],
+        pieSliceTextStyle: {color: '#FFF0F0', fontSize:20},
+        backgroundColor: 'transparent',
+        legend: { textStyle: { color: '#828282',  fontSize: 15, bold:true, } },
+        chartArea: { left: 0, 'width': '80%'},
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
     </script>
   </body>
   </html>
