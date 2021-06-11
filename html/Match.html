@@ -15,28 +15,28 @@
   <link  rel="stylesheet" href="../css/bootstyle.css" >
 
   <style media="screen">
-    .circle{
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 200px;
-      height: 200px;
-      border-radius: 70%;
-      overflow: hidden;
-    }
+  .circle{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    overflow: hidden;
+  }
 
 
   </style>
 
   <script>
-    navigator.mediaDevices.getUserMedia({
-      video:{
-        width: 180,
-      }
-    }).then(stream=>{
-      document.getElementById("vid").srcObject = stream;
-    })
+  navigator.mediaDevices.getUserMedia({
+    video:{
+      width: 180,
+    }
+  }).then(stream=>{
+    document.getElementById("vid").srcObject = stream;
+  })
 
 
   </script>
@@ -94,14 +94,39 @@
             </div>
 
             <div class="section6_cloth">
-              <img src="../img/cloth.png" alt="cloth" class="img-responsive">
+              <img src="../img/cloth.png" alt="cloth" class="img-responsive" >
             </div>
 
           </div>
 
           <div class="col-md-4">
-            <h1>팔레트부분</h1>
-            <img class="img-responsive" src="../img/1.png" alt="spring" />
+            <p id="palette_p">Color Palette</p>
+            <div class="section6_btn">
+              <button type="button" name="button" id="spr" onclick="select(this);">SPRING</button>
+              <button type="button" name="button" id="sum" onclick="select(this);">SUMMER</button>
+              <button type="button" name="button" id="aut" onclick="select(this);">FALL</button>
+              <button type="button" name="button" id="win" onclick="select(this);">WINTER</button>
+            </div>
+            <div class="section6_palette">
+              <table class="palette_table">
+                <tr>
+                  <td bgcolor="#f67280">&nbsp</td>
+                  <td bgcolor="#ffc7c7">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#feffde">&nbsp</td>
+                  <td bgcolor="#a3d2ca">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#8ab6d6">&nbsp</td>
+                  <td bgcolor="#150e56">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#e1e5ea">&nbsp</td>
+                  <td bgcolor="#faf1e6">&nbsp</td>
+                </tr>
+              </table>
+            </div>
           </div>
 
         </div>
