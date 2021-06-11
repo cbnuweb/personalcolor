@@ -202,7 +202,47 @@ nav .container-fluid{
 }
 
 .section6_cloth{
-  background-color: orange;
+  background-color: #f67280;
+}
+
+.section6_btn button{
+  text-align:center;
+  width:24%;
+  height:50px;
+  border:1px solid white;
+  color:white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.section6_btn button:hover{
+  color:black;
+}
+
+.section6_palette{
+  padding-top: 20px;
+  text-align:center;
+}
+
+.palette_table{
+  display:inline-block;
+  border:10px solid white;
+  border-collapse:collapse;
+  text-align:center;
+}
+
+.palette_table td {
+  width: 100px;
+  height: 100px;
+  border:10px solid white;
+}
+
+#palette_p{
+  font-size:20px;
+  line-height:2.2;
+  text-align: center;
+  font-weight: bold;
+  color:black;
 }
 
 #spr{   background-color:#ffb6b9;}
