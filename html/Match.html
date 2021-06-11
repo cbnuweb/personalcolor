@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>P-Color MainPage</title>
+  <title>P-Color MatchingPage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -15,47 +15,32 @@
   <link  rel="stylesheet" href="../css/bootstyle.css" >
 
   <style media="screen">
+  .circle{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+
 
   </style>
 
   <script>
-    function select(id){
-      var seasonid=id.getAttribute('id');
-      var seasondiv=document.getElementById(seasonid+"_div");
-      var season=document.getElementById(seasonid);
-
-      var sprdiv = document.getElementById("spr_div");
-      var sumdiv = document.getElementById("sum_div");
-      var autdiv = document.getElementById("aut_div");
-      var windiv = document.getElementById("win_div");
-
-      if(seasonid=='spr'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='sum'){
-        seasondiv.style.display = 'block';
-        sprdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='aut'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        sprdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='win'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        sprdiv.style.display='none';
-      }
+  navigator.mediaDevices.getUserMedia({
+    video:{
+      width: 180,
     }
+  }).then(stream=>{
+    document.getElementById("vid").srcObject = stream;
+  })
+
 
   </script>
+
 
 </head>
 
@@ -84,47 +69,68 @@
     </div>
   </nav>
 
-  <!-- content div -->
+
+
+  <!-- content div-->
   <div class="container-fluid">
     <div class="content">
-<<<<<<< HEAD
-      <!-- section4 -->
-      <section class="page-section" id="section4">
+      <!-- section6 -->
+      <section class="page-section" id="section6">
 
-        <!-- section4 title -->
+        <!-- section6 title -->
         <div class="section_title">
-          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
-          <h3 class="section-subheading text-muted">Find your personal color type</h3>
+          <h2 class="section-heading text-uppercase">Personal Color Matching</h2>
+          <h3 class="section-subheading text-muted">Match color by personal color type</h3>
         </div>
 
-        <!-- section4 content -->
+        <!-- section6 content-->
         <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="../img/photograph.png" alt="cam" class="section4_image img-resonsive">
+          <div class="col-md-8">
+
+            <div class="section6_camera">
+              <div class="circle">
+                <video id="vid" style="width: 200px; height: 200px; object-fit: cover;" autoplay></video>
+              </div>
             </div>
-            <div class="section4_p">
-              <a href="#">test by cam</a>
+
+            <div class="section6_cloth">
+              <img src="../img/cloth.png" alt="cloth" class="img-responsive" >
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <p id="palette_p">Color Palette</p>
+            <div class="section6_btn">
+              <button type="button" name="button" id="spr" onclick="select(this);">SPRING</button>
+              <button type="button" name="button" id="sum" onclick="select(this);">SUMMER</button>
+              <button type="button" name="button" id="aut" onclick="select(this);">FALL</button>
+              <button type="button" name="button" id="win" onclick="select(this);">WINTER</button>
+            </div>
+            <div class="section6_palette">
+              <table class="palette_table">
+                <tr>
+                  <td bgcolor="#f67280">&nbsp</td>
+                  <td bgcolor="#ffc7c7">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#feffde">&nbsp</td>
+                  <td bgcolor="#a3d2ca">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#8ab6d6">&nbsp</td>
+                  <td bgcolor="#150e56">&nbsp</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#e1e5ea">&nbsp</td>
+                  <td bgcolor="#faf1e6">&nbsp</td>
+                </tr>
+              </table>
             </div>
           </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/picture.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by image</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/exam.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="#">test by survey</a>
-            </div>
->>>>>>> a31c7aae53df2b5e9095e598b3763b9269f415f6
-          </div>
+
         </div>
+
       </section>
     </div>
   </div>
