@@ -12,55 +12,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <link  rel="stylesheet" href="../css/bootstyle.css" >
-
-  <style media="screen">
-
-  </style>
-
-  <script>
-    function select(id){
-      var seasonid=id.getAttribute('id');
-      var seasondiv=document.getElementById(seasonid+"_div");
-      var season=document.getElementById(seasonid);
-
-      var sprdiv = document.getElementById("spr_div");
-      var sumdiv = document.getElementById("sum_div");
-      var autdiv = document.getElementById("aut_div");
-      var windiv = document.getElementById("win_div");
-
-      if(seasonid=='spr'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='sum'){
-        seasondiv.style.display = 'block';
-        sprdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='aut'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        sprdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='win'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        sprdiv.style.display='none';
-      }
-    }
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <link rel="stylesheet" href="../css/Test.css">
+  <script type="text/javascript" src="../javascript/Test.js"></script>
 
   </script>
-
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
-
 
   <!-- nav div -->
   <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
@@ -87,39 +46,39 @@
   <!-- content div -->
   <div class="container-fluid">
     <div class="content">
-      <!-- section4 -->
-      <section class="page-section" id="section4">
+      <!-- testsection -->
+      <section class="page_section" id="testsection">
 
-        <!-- section4 title -->
+        <!-- testsection title -->
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color Test</h2>
           <h3 class="section-subheading text-muted">Find your personal color type</h3>
         </div>
 
-        <!-- section4 content -->
+        <!-- testsection content -->
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" id="cam" onclick="location.href='Cam.html'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
-              <img src="../img/photograph.png" alt="cam" class="section4_image img-resonsive">
+              <img src="../img/photograph.png" alt="cam" class="testsection_image img-resonsive">
             </div>
-            <div class="section4_p">
-              <a href="Cam.html">test by cam</a>
+            <div class="testsection_p">
+              <p id="cam_p">test by cam</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" id="upload" onclick="location.href='Upload.html'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
-              <img src="../img/picture.png" alt="cam" class="section4_image img-resonsive">
+              <img src="../img/picture.png" alt="picture" class="testsection_image img-resonsive">
             </div>
-            <div class="section4_p">
-              <a href="Upload.html">test by image</a>
+            <div class="testsection_p">
+              <p id="upload_p">test by picture</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" id="survey" onclick="location.href='Survey.html'" onmouseover="over(this);" onmouseout="out(this);">
             <div>
-              <img src="../img/exam.png" alt="cam" class="section4_image img-resonsive">
+              <img src="../img/survey.png" alt="survey" class="testsection_image img-resonsive">
             </div>
-            <div class="section4_p">
-              <a href="Survey.html">test by survey</a>
+            <div class="testsection_p">
+              <p id="survey_p">test by survey</p>
             </div>
           </div>
         </div>
@@ -146,7 +105,6 @@
         <label><b>Tel :</b> 010-8620-5458</label><br>
         <label><b>Email :</b> jijking1209@naver.com</label>
       </div>
-
     </footer>
 
   </body>

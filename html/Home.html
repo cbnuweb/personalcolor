@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <title>P-Color MainPage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,13 +11,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <link  rel="stylesheet" href="../css/bootstyle.css" >
-
+  <link  rel="stylesheet" href="../css/Home.css" >
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <script type="text/javascript" src="../javascript/ChartMap.js"></script>
+  <script type="text/javascript">
+  window.scrollTo(0,0);
+  </script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
-
-
   <!-- nav div -->
   <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
     <div class="container-fluid">
@@ -40,7 +41,6 @@
       </div>
     </div>
   </nav>
-
 
   <!-- carousel div -->
   <div id="myCarousel" class="container-fluid carousel slide text-center" data-ride="carousel">
@@ -80,19 +80,15 @@
     </a>
   </div>
 
-
-
   <!-- content div-->
   <div class="container-fluid">
     <div class="content">
       <!-- section1 -->
-      <section class="page-section" id="section1">
-        <!-- section1 title -->
+      <section class="page_section" id="section1">
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color</h2>
           <h3 class="section-subheading text-muted">A brief description of personal color.</h3>
         </div>
-        <!-- section1 content -->
         <div class="row">
           <div class="col-md-6">
             <img class="img-responsive" src="../img/color.png" alt="color">
@@ -105,23 +101,19 @@
       </section>
 
       <!-- section2 -->
-      <section class="page-section" id="section2">
-        <!-- section2 title -->
+      <section class="page_section" id="section2">
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color 4type</h2>
           <h3 class="section-subheading text-muted">Four types of personal colors.</h3>
         </div>
-        <!-- Portfolio item 2 -->
         <div class="row">
           <!-- Portfolio item 1-->
-          <div class="col-md-6 ">
+          <div class="col-md-6" style="padding-bottom:15px;">
             <img class="img-responsive" src="../img/1.png" alt="spring" />
-            <p>Spring Warm</p>
           </div>
           <!-- Portfolio item 2-->
           <div class="col-md-6">
             <img class="img-responsive" src="../img/2.png" alt="summer" />
-            <p>Summer Cool</p>
           </div>
         </div>
 
@@ -129,40 +121,38 @@
           <!-- Portfolio item 3-->
           <div class="col-md-6 ">
             <img class="img-responsive" src="../img/3.png" alt="fall" />
-            <p>Fall Warm</p>
           </div>
           <!-- Portfolio item 4-->
           <div class="col-md-6">
             <img class="img-responsive" src="../img/4.png" alt="winter" />
-            <p>Winter Cool</p>
           </div>
         </div>
       </section>
 
       <!-- section3 -->
-      <section class="page-section" id="section3">
-        <div class="section_title">
+      <section class="page_section" id="section3">
+        <div class="section_title" style="padding:0;">
           <h2 class="section-heading text-uppercase">Personal Color Tone Chart</h2>
-          <h3 class="section-subheading text-muted">Korean Personal Color Ratio.</h3>
+          <h3 class="section-subheading text-muted">Personal Color Distribution Ratio</h3>
         </div>
         <div class="row">
           <div id="donutchart" style="width: 900px; height: 500px; margin:0 auto;"></div>
         </div>
       </section>
 
-      <!-- section map -->
-      <section class="page-section" id="mapsection">
+      <!-- section4 -->
+      <section class="page_section" id="section4">
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Nearby offline color test store</h2>
           <h3 class="section-subheading text-muted">Try the offline store for a more accurate examination.</h3>
         </div>
-          <div class="row">
-          <div id="map" style="width:930px; height: 500px;  margin:0 auto;"></div>
-          </div>
+        <div class="row">
+          <div id="map" style="width:930px; height: 500px; margin:0 auto;"></div>
+        </div>
       </section>
 
-      <!-- sectionc contact -->
-      <section class="page-section" id="contactsection">
+      <!-- sectionc5 -->
+      <section class="page_section" id="section5">
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Contact</h2>
           <h3 class="section-subheading text-muted">If you have any questions about the site, please email.</h3>
@@ -170,26 +160,29 @@
         <div class="row">
           <div class="col-md-4">
             <p><span class="glyphicon glyphicon-map-marker"></span>ChungJu, Korea</p>
-            <p><span class="glyphicon glyphicon-phone"></span>Phone: +86 010-8620-5458</p>
-            <p><span class="glyphicon glyphicon-envelope"></span>Email: jswking1209@gmail.com</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +86 010-1234-5678</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: silverj125@chungbuk.ac.kr</p>
           </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <form class="gform" action="https://script.google.com/macros/s/AKfycbxtmaieLVWHvxQtUaBIp2BeA9MPVn7pB2nC9WsC/exec" method="POST" data-email="silverj125@chungbuk.ac.kr">
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
               </div>
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+              <br>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <button class="btn pull-right" type="submit">Send</button>
+                </div>
               </div>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-            <br>
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <button class="btn pull-right" type="submit">Send</button>
-              </div>
-            </div>
-          </div>
+          </form>
+
         </div>
 
       </section>
@@ -215,185 +208,9 @@
         <label><b>Tel :</b> 010-8620-5458</label><br>
         <label><b>Email :</b> jijking1209@naver.com</label>
       </div>
-
     </footer>
 
-
-    <!--script-->
-    <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-
-      $(window).scroll(function () {
-        $(".slideanim").each(function () {
-          var pos = $(this).offset().top;
-
-          var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("slide");
-          }
-        });
-      });
-    })
-
-
-    // donutchart
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Type', 'People in Korea'],
-        ['Spring Warm', 22],
-        ['Summer Cool', 41.6],
-        ['Autumn Warm', 6.96],
-        ['Winter Cool', 24.9]
-      ]);
-
-      var options = {
-        title: 'Personal Color Distribution Ratio',
-        titleTextStyle: {
-          color: '#464646',
-          bold:true,
-          fontSize: 20,
-          fontName : 'cutefont'
-        },
-        pieHole: 0.4,
-        colors:['#FFC846', '#AECDFF', '#FF9614', '#FF4646'],
-        pieSliceTextStyle: {color: '#FFF0F0', fontSize:20,fontName : 'cutefont'},
-        backgroundColor: 'transparent',
-        legend: { textStyle: { color: '#828282',  fontSize: 15, bold:true, fontName : 'cutefont'} },
-        chartArea: { left:100, 'width': '100%'},
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-      chart.draw(data, options);
-    }
-
-      function Map(){
-        var mapCanvas = document.getElementById("map");
-        var Cbnu = new google.maps.LatLng(36.62983570213899, 127.45603965851362); //충북대학
-        var ColorAzit = new google.maps.LatLng(36.62347622576889, 127.42385836219606); //컬러아지트
-        var Jenaraum = new google.maps.LatLng(36.63311035228879, 127.45741017385666); //제나라움
-        var Bnc = new google.maps.LatLng(36.59897093498828, 127.45585057068558); //비앤씨컬러
-
-
-        var mapOptions = {
-          center: Cbnu,
-          zoom: 13,
-        };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-
-        var marker = new google.maps.Marker({
-          position:Cbnu,
-          animation: google.maps.Animation.BOUNCE,
-          icon: '../img/cbnu.png'
-        });
-        marker.setMap(map);
-
-        var info = new google.maps.InfoWindow({
-         content: "충북대학교"
-       });
-       info.open(map,marker);
-
-        var c1 = new google.maps.Circle({
-          center: Cbnu,
-          radius: 150,
-          strokeColor: "#FF9100",
-          strokeOpacity: 0.9,
-          strokeWeight: 3,
-          fillColor: "#FF9100",
-          fillOpacity: 0.3
-        });
-        c1.setMap(map);
-
-        var marker2 = new google.maps.Marker({
-          position:ColorAzit,
-          animation: google.maps.Animation.BOUNCE,
-        });
-        marker2.setMap(map);
-
-        var info2 = new google.maps.InfoWindow({
-         content: "컬러아지트",
-       });
-       info2.open(map,marker2);
-
-        var c2 = new google.maps.Circle({
-          center: ColorAzit,
-          radius: 150,
-          strokeColor: "#8AE634",
-          strokeOpacity: 0.9,
-          strokeWeight: 2,
-          fillColor: "#8AE634",
-          fillOpacity: 0.3
-        });
-        c2.setMap(map);
-
-        var marker3 = new google.maps.Marker({
-          position:Jenaraum,
-          animation: google.maps.Animation.BOUNCE,
-        });
-        marker3.setMap(map);
-
-        var info3 = new google.maps.InfoWindow({
-         content: "제나라움",
-       });
-       info3.open(map,marker3);
-
-        var c3 = new google.maps.Circle({
-          center: Jenaraum,
-          radius: 150,
-          strokeColor: "#228B22",
-          strokeOpacity: 0.9,
-          strokeWeight: 2,
-          fillColor: "#228B22",
-          fillOpacity: 0.3
-        });
-        c3.setMap(map);
-
-        var marker4 = new google.maps.Marker({
-          position:Bnc,
-          animation: google.maps.Animation.BOUNCE,
-        });
-        marker4.setMap(map);
-
-        var info4 = new google.maps.InfoWindow({
-         content: "비앤씨컬러",
-       });
-       info4.open(map,marker4);
-
-        var c4 = new google.maps.Circle({
-          center: Bnc,
-          radius: 150,
-          strokeColor: "#288CD2",
-          strokeOpacity: 0.9,
-          strokeWeight: 2,
-          fillColor: "#288CD2",
-          fillOpacity: 0.3
-        });
-        c4.setMap(map);
-      }
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Jjr0DCbmbCD_9GOkLnyvyXSIR0VgC6c&callback=Map"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Jjr0DCbmbCD_9GOkLnyvyXSIR0VgC6c&callback=drawMap"></script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
   </body>
   </html>
