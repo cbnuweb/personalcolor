@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>P-Color MainPage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <link  rel="stylesheet" href="../css/bootstyle.css" >
+
+  <style media="screen">
+
+  </style>
+
+  <script>
+    function select(id){
+        var answer = id.getAttribute("id");
+        var answer_div = document.getElementById(answer+"_div");
+
+        var arr2=new Array();
+
+        for(var i=1; i<19; i++){
+          arr2[i] = document.getElementById("q"+i+"_div");
+        }
+
+        for(var i = 1; i<19; i++){
+          arr2[i].style.display='none';
+        }
+        answer_div.style.display="block"
+
+      }
+
+    function spr(){
+      window.location.href="Spring.html";
+    }
+
+    function sum(){
+      window.location.href="Summer.html";
+    }
+
+    function aut(){
+      window.location.href="Autumn.html";
+    }
+
+    function win(){
+      window.location.href="Winter.html";
+    }
+  </script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
+
+
+  <!-- nav div -->
+  <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../img/logo.png" width=40%></img>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
+          <li><a href="Home.html">Color <br> Palette<br></a></li>
+          <li><a href="Test.html">Personal Color<br>TEST</a></li>
+          <li><a href="Spring.html">Personal color<br>CHARACTERISTICS</a></li>
+          <li><a href="Match.html">Personal color<br>MATCHING</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content div -->
+  <div class="container-fluid">
+    <div class="content">
+      <!-- section4 -->
+      <section class="page-section" id="section4">
+
+        <!-- section4 title -->
+        <div class="section_title">
+          <h2 class="section-heading text-uppercase">Personal Color Test</h2>
+          <h3 class="section-subheading text-muted">Test by Survey</h3>
+        </div>
+
+        <!-- section4 content -->
+        <div class="row">
+          <div id="q1_div">
+            <h4>당신의 피부색은?</h4> <br>
+            <button type="button" name="button" id="q4" onclick="select(this);" style = "width:300px;margin:5px;">흰 편</button> <br>
+            <button type="button" name="button" id="q2" onclick="select(this);" style = "width:300px;margin:5px;">검은 편</button> <br>
+          </div>
+
+          <div id="q2_div"  style="display:none;">
+            <h4>당신의 눈동자 색은?</h4> <br>
+            <button type="button" name="button" id="q5" onclick="select(this);" style = "width:300px;margin:5px;">짙은 갈색, 검정</button> <br>
+            <button type="button" name="button" id="q3" onclick="select(this);" style = "width:300px;margin:5px;">밝은 갈색</button> <br>
+          </div>
+
+          <div id="q3_div"  style="display:none;">
+            <h4>잘 어울리는 아이섀도우 색은?</h4> <br>
+            <button type="button" name="button" id="q4" onclick="select(this);" style = "width:300px;margin:5px;">그레이 계열</button> <br>
+            <button type="button" name="button" id="q11" onclick="select(this);" style = "width:300px;margin:5px;">브라운 계열</button> <br>
+          </div>
+
+          <div id="q4_div"  style="display:none;">
+            <h4>당신의 눈의 인상은? </h4><br>
+            <button type="button" name="button" id="q5" onclick="select(this);" style = "width:300px;margin:5px;">강한 편</button> <br>
+            <button type="button" name="button" id="q7" onclick="select(this);" style = "width:300px;margin:5px;">부드러운 편</button> <br>
+          </div>
+
+          <div id="q5_div"  style="display:none;">
+            <h4>당신에게 어울리는 핑크색은?</h4> <br>
+            <button type="button" name="button" id="q10" onclick="select(this);" style = "width:300px;margin:5px;">핫 핑크</button> <br>
+            <button type="button" name="button" id="q8" onclick="select(this);" style = "width:300px;margin:5px;">코랄 핑크</button> <br>
+          </div>
+
+          <div id="q6_div"  style="display:none;">
+            <h4>연핑크나 연노랑 등의 포근하고 사랑스러운 색이 어울리는가?</h4> <br>
+            <button type="button" name="button" id="q17" onclick="select(this);" style = "width:300px;margin:5px;">잘 어울림</button> <br>
+            <button type="button" name="button" id="q14" onclick="select(this);" style = "width:300px;margin:5px;">잘 어울리지 않음</button> <br>
+          </div>
+
+          <div id="q7_div"  style="display:none;">
+            <h4>맨 얼굴로 검은색 옷을 입으면 어떤가?</h4> <br>
+            <button type="button" name="button" id="q10" onclick="select(this);" style = "width:300px;margin:5px;">이목구비가 뚜렷하게 보임</button> <br>
+            <button type="button" name="button" id="q5" onclick="select(this);" style = "width:300px;margin:5px;">얼굴색이 안 보임</button> <br>
+          </div>
+
+          <div id="q8_div"  style="display:none;">
+            <h4>당신에게 어울리는 악세서리는?</h4> <br>
+            <button type="button" name="button" id="q6" onclick="select(this);" style = "width:300px;margin:5px;">골드</button> <br>
+            <button type="button" name="button" id="q9" onclick="select(this);" style = "width:300px;margin:5px;">실버</button> <br>
+          </div>
+
+          <div id="q9_div"  style="display:none;">
+            <h4>황토색, 겨자색, 이끼색, 적갈색 등 차분하고 고상한 색이 잘 어울리는가?</h4> <br>
+            <button type="button" name="button" id="q15" onclick="select(this);" style = "width:300px;margin:5px;">잘 어울림</button> <br>
+            <button type="button" name="button" id="q16" onclick="select(this);" style = "width:300px;margin:5px;">잘 어울리지 않음</button> <br>
+          </div>
+
+          <div id="q10_div"  style="display:none;">
+            <h4>당신의 첫인상은?</h4> <br>
+            <button type="button" name="button" id="q13" onclick="select(this);" style = "width:300px;margin:5px;">강한 인상</button> <br>
+            <button type="button" name="button" id="q11" onclick="select(this);" style = "width:300px;margin:5px;">부드러운 인상</button> <br>
+            <button type="button" name="button" id="q8" onclick="select(this);" style = "width:300px;margin:5px;">평범한 인상</button> <br>
+          </div>
+
+          <div id="q11_div"  style="display:none;">
+            <h4>햇빛에 노출되면 어떻게 되는가?</h4> <br>
+            <button type="button" name="button" id="q9" onclick="select(this);" style = "width:300px;margin:5px;">잘 탄다</button> <br>
+            <button type="button" name="button" id="q8" onclick="select(this);" style = "width:300px;margin:5px;">잘 안 탄다</button> <br>
+            <button type="button" name="button" id="q12" onclick="select(this);" style = "width:300px;margin:5px;">어느 쪽도 아니다</button> <br>
+          </div>
+
+          <div id="q12_div"  style="display:none;">
+            <h4>당신의 이미지는?</h4> <br>
+            <button type="button" name="button" id="q17" onclick="select(this);" style = "width:300px;margin:5px;">친근감 있고 부드러운 이미지</button> <br>
+            <button type="button" name="button" id="q14" onclick="select(this);" style = "width:300px;margin:5px;">강하고 차가운 이미지</button> <br>
+          </div>
+
+          <div id="q13_div"  style="display:none;">
+            <h4>잘 어울리는 색은?</h4> <br>
+            <button type="button" name="button" id="q14" onclick="select(this);" style = "width:300px;margin:5px;">선명한 원색</button> <br>
+            <button type="button" name="button" id="q8" onclick="select(this);" style = "width:300px;margin:5px;">부드러운 파스텔 색</button> <br>
+          </div>
+
+          <div id="q14_div"  style="display:none;">
+            <h4>얼굴 가까이에 대보았을 때 가장 잘 어울리는 꽃은?</h4> <br>
+            <button type="button" name="button" id="q18" onclick="select(this);" style = "width:300px;margin:5px;">붉은 장미</button> <br>
+            <button type="button" name="button" id="q17" onclick="select(this);" style = "width:300px;margin:5px;">핑크 빛의 튤립</button> <br>
+          </div>
+
+          <div id="q15_div"  style="display:none;">
+            <h4>당신의 헤어컬러는?</h4> <br>
+            <button type="button" name="button" id="q18" onclick="select(this);" style = "width:300px;margin:5px;">진한 갈색, 진한 검정</button> <br>
+            <button type="button" name="button" id="q14" onclick="select(this);" style = "width:300px;margin:5px;">밝은 갈색, 부드러운 검정</button> <br>
+          </div>
+
+          <div id="q16_div"  style="display:none;">
+            <h4>당신의 얼굴은 어려보이는 편인가?</h4> <br>
+            <button type="button" name="button" id="res_spr" onclick="spr();" style = "width:300px;margin:5px;">그런 편</button> <br>
+            <button type="button" name="button" id="res_aut" onclick="aut();" style = "width:300px;margin:5px;">아닌 편</button> <br>
+          </div>
+
+          <div id="q17_div"  style="display:none;">
+            <h4>당신에게 잘 어울리는 티셔츠 색은?</h4> <br>
+            <button type="button" name="button" id="q16" onclick="select(this);" style = "width:300px;margin:5px;">노란기가 있는 따뜻한 색</button> <br>
+            <button type="button" name="button" id="res_sum" onclick="sum();" style = "width:300px;margin:5px;">푸른기가 있는 차가운 색</button> <br>
+          </div>
+
+          <div id="q18_div"  style="display:none;">
+            <h4>당신이 어두운 색 정장을 입는다면 어울리는 색은? </h4> <br>
+            <button type="button" name="button" id="res_win" onclick="win();" style = "width:300px;margin:5px;">검정, 회색 계열</button> <br>
+            <button type="button" name="button" id="res_aut" onclick="aut();" style = "width:300px;margin:5px;">다크 브라운 </button> <br>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer class="container-fluid text-center" id="footer">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br>
+    <div class="row">
+      <div class="col-md-9" style="text-align:left;">
+        <h4>About us</h4>
+        <label><b>Team leader :</b> Cheon Eun-jung</label><br>
+        <label><b>Team Member :</b> Jeon Seung-won, Oh Jun-young</label><br>
+        <label><b>Address :</b> S4-1-dong No. 116 in Gaeksin-ro, Heungdeok-gu, Chungbuk-do</label>
+
+      </div>
+      <div class="col-md-3" style="text-align:left;">
+        <h4>Contact us</h4>
+        <label><b>Tel :</b> 010-8620-5458</label><br>
+        <label><b>Email :</b> jijking1209@naver.com</label>
+      </div>
+
+    </footer>
+
+  </body>
+  </html>
