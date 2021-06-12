@@ -142,12 +142,56 @@
       <!-- section3 -->
       <section class="page-section" id="section3">
         <div class="section_title">
-          <h2 class="section-heading text-uppercase">Personal Color</h2>
-          <h3 class="section-subheading text-muted">A brief description of personal color.</h3>
+          <h2 class="section-heading text-uppercase">Personal Color Tone Chart</h2>
+          <h3 class="section-subheading text-muted">Korean Personal Color Ratio.</h3>
         </div>
         <div class="row">
           <div id="donutchart" style="width: 900px; height: 500px; margin:0 auto;"></div>
         </div>
+      </section>
+
+      <!-- section map -->
+      <section class="page-section" id="mapsection">
+        <div class="section_title">
+          <h2 class="section-heading text-uppercase">Nearby offline color test store</h2>
+          <h3 class="section-subheading text-muted">Try the offline store for a more accurate examination.</h3>
+        </div>
+          <div class="row">
+          <div id="map" style="width:930px; height: 500px;  margin:0 auto;"></div>
+          </div>
+      </section>
+
+      <!-- sectionc contact -->
+      <section class="page-section" id="contactsection">
+        <div class="section_title">
+          <h2 class="section-heading text-uppercase">Contact</h2>
+          <h3 class="section-subheading text-muted">If you have any questions about the site, please email.</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p><span class="glyphicon glyphicon-map-marker"></span>ChungJu, Korea</p>
+            <p><span class="glyphicon glyphicon-phone"></span>Phone: +86 010-8620-5458</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: jswking1209@gmail.com</p>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <br>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <button class="btn pull-right" type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
     </div>
   </div>
@@ -212,6 +256,7 @@
       });
     })
 
+
     // donutchart
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
@@ -243,6 +288,112 @@
       var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
       chart.draw(data, options);
     }
+
+      function Map(){
+        var mapCanvas = document.getElementById("map");
+        var Cbnu = new google.maps.LatLng(36.62983570213899, 127.45603965851362); //충북대학
+        var ColorAzit = new google.maps.LatLng(36.62347622576889, 127.42385836219606); //컬러아지트
+        var Jenaraum = new google.maps.LatLng(36.63311035228879, 127.45741017385666); //제나라움
+        var Bnc = new google.maps.LatLng(36.59897093498828, 127.45585057068558); //비앤씨컬러
+
+
+        var mapOptions = {
+          center: Cbnu,
+          zoom: 13,
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var marker = new google.maps.Marker({
+          position:Cbnu,
+          animation: google.maps.Animation.BOUNCE,
+          icon: '../img/cbnu.png'
+        });
+        marker.setMap(map);
+
+        var info = new google.maps.InfoWindow({
+         content: "충북대학교"
+       });
+       info.open(map,marker);
+
+        var c1 = new google.maps.Circle({
+          center: Cbnu,
+          radius: 150,
+          strokeColor: "#FF9100",
+          strokeOpacity: 0.9,
+          strokeWeight: 3,
+          fillColor: "#FF9100",
+          fillOpacity: 0.3
+        });
+        c1.setMap(map);
+
+        var marker2 = new google.maps.Marker({
+          position:ColorAzit,
+          animation: google.maps.Animation.BOUNCE,
+        });
+        marker2.setMap(map);
+
+        var info2 = new google.maps.InfoWindow({
+         content: "컬러아지트",
+       });
+       info2.open(map,marker2);
+
+        var c2 = new google.maps.Circle({
+          center: ColorAzit,
+          radius: 150,
+          strokeColor: "#8AE634",
+          strokeOpacity: 0.9,
+          strokeWeight: 2,
+          fillColor: "#8AE634",
+          fillOpacity: 0.3
+        });
+        c2.setMap(map);
+
+        var marker3 = new google.maps.Marker({
+          position:Jenaraum,
+          animation: google.maps.Animation.BOUNCE,
+        });
+        marker3.setMap(map);
+
+        var info3 = new google.maps.InfoWindow({
+         content: "제나라움",
+       });
+       info3.open(map,marker3);
+
+        var c3 = new google.maps.Circle({
+          center: Jenaraum,
+          radius: 150,
+          strokeColor: "#228B22",
+          strokeOpacity: 0.9,
+          strokeWeight: 2,
+          fillColor: "#228B22",
+          fillOpacity: 0.3
+        });
+        c3.setMap(map);
+
+        var marker4 = new google.maps.Marker({
+          position:Bnc,
+          animation: google.maps.Animation.BOUNCE,
+        });
+        marker4.setMap(map);
+
+        var info4 = new google.maps.InfoWindow({
+         content: "비앤씨컬러",
+       });
+       info4.open(map,marker4);
+
+        var c4 = new google.maps.Circle({
+          center: Bnc,
+          radius: 150,
+          strokeColor: "#288CD2",
+          strokeOpacity: 0.9,
+          strokeWeight: 2,
+          fillColor: "#288CD2",
+          fillOpacity: 0.3
+        });
+        c4.setMap(map);
+      }
+
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Jjr0DCbmbCD_9GOkLnyvyXSIR0VgC6c&callback=Map"></script>
   </body>
   </html>

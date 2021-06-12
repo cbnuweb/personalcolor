@@ -153,6 +153,12 @@ nav .container-fluid{
   word-break:break-all;
 }
 
+#contactsection{
+  text-align:center;
+  word-break:break-all;
+  background-color:	#FFFAEF;
+}
+
 .section4_image{
   width:60%;
   background-size:contain;
