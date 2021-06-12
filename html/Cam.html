@@ -19,43 +19,50 @@
   </style>
 
   <script>
-    function select(id){
-      var seasonid=id.getAttribute('id');
-      var seasondiv=document.getElementById(seasonid+"_div");
-      var season=document.getElementById(seasonid);
+    navigator.mediaDevices.getUserMedia({
+      video:{
+        width: 180,
+      }
+    }).then(stream =>{
+      document.getElementById("vid").srcObject = stream;
+    })
 
-      var sprdiv = document.getElementById("spr_div");
-      var sumdiv = document.getElementById("sum_div");
-      var autdiv = document.getElementById("aut_div");
-      var windiv = document.getElementById("win_div");
-
-      if(seasonid=='spr'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='sum'){
-        seasondiv.style.display = 'block';
-        sprdiv.style.display='none';
-        autdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='aut'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        sprdiv.style.display='none';
-        windiv.style.display='none';
-      }
-      else if(seasonid=='win'){
-        seasondiv.style.display = 'block';
-        sumdiv.style.display='none';
-        autdiv.style.display='none';
-        sprdiv.style.display='none';
-      }
+    function f1(){
+      var url = "url('../img/spr.png')";
+      document.getElementById("bg").style.backgroundImage = url;
+    }
+    function f2(){
+      var url = "url('../img/sum.png')";
+      document.getElementById("bg").style.backgroundImage = url;
+    }
+    function f3(){
+      var url = "url('../img/aut.png')";
+      document.getElementById("bg").style.backgroundImage = url;
+    }
+    function f4(){
+      var url = "url('../img/win.png')";
+      document.getElementById("bg").style.backgroundImage = url;
     }
 
   </script>
+
+  <style>
+      .circle{
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width: 300px;
+      height: 300px;
+      border-radius: 70%;
+      overflow: hidden;
+    }
+    .cam{
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+    </style>
 
 </head>
 
@@ -98,29 +105,25 @@
 
         <!-- section4 content -->
         <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="../img/photograph.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="Cam.html">test by cam</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/picture.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="Upload.html">test by image</a>
+          <div id="bg" style="display:flex; align-items:center; justify-content:center; height:100vh;
+          background-image: url('../img/spr.png');
+          text-align: center; background-repeat:no-repeat; background-size:contain; position:relative;
+          vertical-align:middle; background-position: center;">
+            <div class="circle">
+              <video class="cam" id="vid" autoplay></video>
             </div>
           </div>
-          <div class="col-md-4">
-            <div>
-              <img src="../img/exam.png" alt="cam" class="section4_image img-resonsive">
-            </div>
-            <div class="section4_p">
-              <a href="Survey.html">test by survey</a>
-            </div>
+
+          <input type="button" value="spring" onclick="f1();">
+          <input type="button" value="summer" onclick="f2();">
+          <input type="button" value="fall" onclick="f3();">
+          <input type="button" value="winter" onclick="f4();">
+          <div>
+            나에게 어울리는 계절은? <br>
+            <a href="Spring.html">봄</a> <br>
+            <a href="Summer.html">여름</a> <br>
+            <a href="Autumn.html">가을</a> <br>
+            <a href="Winter.html">겨울</a> <br>
           </div>
         </div>
       </section>
