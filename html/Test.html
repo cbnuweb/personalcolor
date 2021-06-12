@@ -18,6 +18,45 @@
 
   </style>
 
+  <script>
+    function select(id){
+      var seasonid=id.getAttribute('id');
+      var seasondiv=document.getElementById(seasonid+"_div");
+      var season=document.getElementById(seasonid);
+
+      var sprdiv = document.getElementById("spr_div");
+      var sumdiv = document.getElementById("sum_div");
+      var autdiv = document.getElementById("aut_div");
+      var windiv = document.getElementById("win_div");
+
+      if(seasonid=='spr'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        autdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='sum'){
+        seasondiv.style.display = 'block';
+        sprdiv.style.display='none';
+        autdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='aut'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        sprdiv.style.display='none';
+        windiv.style.display='none';
+      }
+      else if(seasonid=='win'){
+        seasondiv.style.display = 'block';
+        sumdiv.style.display='none';
+        autdiv.style.display='none';
+        sprdiv.style.display='none';
+      }
+    }
+
+  </script>
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
@@ -38,7 +77,7 @@
         <ul class="nav navbar-nav navbar-right" style="text-align:center; font-weight:bold; margin-left:10px;">
           <li><a href="Home.html">Color <br> Palette<br></a></li>
           <li><a href="Test.html">Personal Color<br>TEST</a></li>
-          <li><a href="Char.html">Personal color<br>CHARACTERISTICS</a></li>
+          <li><a href="Spring.html">Personal color<br>CHARACTERISTICS</a></li>
           <li><a href="Match.html">Personal color<br>MATCHING</a></li>
         </ul>
       </div>
@@ -48,7 +87,7 @@
   <!-- content div -->
   <div class="container-fluid">
     <div class="content">
-
+<<<<<<< HEAD
       <!-- section4 -->
       <section class="page-section" id="section4">
 
@@ -83,8 +122,8 @@
             <div class="section4_p">
               <a href="#">test by survey</a>
             </div>
+>>>>>>> a31c7aae53df2b5e9095e598b3763b9269f415f6
           </div>
-
         </div>
       </section>
     </div>
