@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <title>P-Color MainPage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,13 +11,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <link  rel="stylesheet" href="../css/bootstyle.css" >
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <link  rel="stylesheet" href="../css/Test.css" >
+  <script type="text/javascript" src="../javascript/Test.js"></script>
 
-  <style media="screen">
-
-  </style>
-
-  <script>
+  <script type="text/javascript">
     navigator.mediaDevices.getUserMedia({
       video:{
         width: 180,
@@ -26,49 +23,10 @@
     }).then(stream =>{
       document.getElementById("vid").srcObject = stream;
     })
-
-    function f1(){
-      var url = "url('../img/spr.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f2(){
-      var url = "url('../img/sum.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f3(){
-      var url = "url('../img/aut.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f4(){
-      var url = "url('../img/win.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-
   </script>
-
-  <style>
-      .circle{
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width: 300px;
-      height: 300px;
-      border-radius: 70%;
-      overflow: hidden;
-    }
-    .cam{
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-    }
-    </style>
-
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
-
-
   <!-- nav div -->
   <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
     <div class="container-fluid">
@@ -94,40 +52,27 @@
   <!-- content div -->
   <div class="container-fluid">
     <div class="content">
-      <!-- section4 -->
-      <section class="page-section" id="section4">
-
-        <!-- section4 title -->
+      <!-- camsection -->
+      <section class="page_section testinsection">
+        <!-- camsection title -->
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color Test</h2>
           <h3 class="section-subheading text-muted">Find your personal color type</h3>
         </div>
-
-        <!-- section4 content -->
-        <div class="row">
-          <div id="bg" style="display:flex; align-items:center; justify-content:center; height:100vh;
-          background-image: url('../img/spr.png');
-          text-align: center; background-repeat:no-repeat; background-size:contain; position:relative;
-          vertical-align:middle; background-position: center;">
-            <div class="circle">
-              <video class="cam" id="vid" autoplay></video>
-            </div>
+        <!-- camsection content -->
+        <div class="testinsection_image" id="testinsection_cam">
+          <img class="arrow" src="../img/left.png" id="left" alt="left" onclick="changebg(this,1);"></img>
+          <div class="circle">
+            <video class="cam" id="vid" autoplay></video>
           </div>
-
-          <input type="button" value="spring" onclick="f1();">
-          <input type="button" value="summer" onclick="f2();">
-          <input type="button" value="fall" onclick="f3();">
-          <input type="button" value="winter" onclick="f4();">
-          <div>
-            나에게 어울리는 계절은? <br>
-            <a href="Spring.html">봄</a> <br>
-            <a href="Summer.html">여름</a> <br>
-            <a href="Autumn.html">가을</a> <br>
-            <a href="Winter.html">겨울</a> <br>
-          </div>
+          <img class="arrow" src="../img/right.png" id="right" alt="right" onclick="changebg(this,1);"></img>
         </div>
-      </section>
-    </div>
+        <h3>Choose the background where your face looks the brightest!</h3>
+        <div style="padding:15px;">
+          <button class="testinsection_btn" type="button" name="button" onclick="select()">Select!</button>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!--footer-->
@@ -149,7 +94,6 @@
         <label><b>Tel :</b> 010-8620-5458</label><br>
         <label><b>Email :</b> jijking1209@naver.com</label>
       </div>
-
     </footer>
 
   </body>

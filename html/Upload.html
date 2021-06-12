@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <title>P-Color MainPage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,56 +11,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <link  rel="stylesheet" href="../css/bootstyle.css" >
-
-  <style media="screen">
-
-  </style>
-
-  <script>
-
-    function f1(){
-      var url = "url('../img/spr.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f2(){
-      var url = "url('../img/sum.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f3(){
-      var url = "url('../img/aut.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-    function f4(){
-      var url = "url('../img/win.png')";
-      document.getElementById("bg").style.backgroundImage = url;
-    }
-
-  </script>
-
-  <style>
-      .circle{
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width: 300px;
-      height: 300px;
-      border-radius: 70%;
-      overflow: hidden;
-    }
-    .upload{
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-    }
-    </style>
-
+  <link  rel="stylesheet" href="../css/Main.css" >
+  <link  rel="stylesheet" href="../css/Test.css" >
+  <script type="text/javascript" src="../javascript/Test.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="padding-top:100px;">
-
-
   <!-- nav div -->
   <nav class="navbar navbar-expnad-xl navbar-light navbar-fixed-top">
     <div class="container-fluid">
@@ -87,51 +42,42 @@
   <!-- content div -->
   <div class="container-fluid">
     <div class="content">
-      <!-- section4 -->
-      <section class="page-section" id="section4">
-
-        <!-- section4 title -->
+      <!-- uploadsection -->
+      <section class="page_section testinsection">
+        <!-- uploadsection title -->
         <div class="section_title">
           <h2 class="section-heading text-uppercase">Personal Color Test</h2>
           <h3 class="section-subheading text-muted">Find your personal color type</h3>
         </div>
+        <!-- uploadsection content -->
 
-        <!-- section4 content -->
-        <div class="row">
-          <div id="bg" style="display:flex; align-items:center; justify-content:center; height:100vh;
-          background-image: url('../img/spr.png');
-          text-align: center; background-repeat:no-repeat; background-size:contain; position:relative;
-          vertical-align:middle; background-position: center;">
-            <div class="circle">
-              <img class="upload" src="example.jpg" id="img_section">
-            </div>
+        <div class="testinsection_image" id="testinsection_img">
+          <img class="arrow" src="../img/left.png" id="left" alt="left" onclick="changebg(this,2);"></img>
+          <div class="circle">
+            <img class="upload" src="../img/example.png" id="img_section"></img>
           </div>
-          <input type="file" id="upload_file" accept="image/*" required = true value = "업로드">
-          <script>
-            const reader = new FileReader();
+          <img class="arrow" src="../img/right.png" id="right" alt="right" onclick="changebg(this,2);"></img>
+        </div>
 
-            reader.onload = (readerEvent) => {
-              document.querySelector("#img_section").setAttribute("src", readerEvent.target.result);
-            };
+        <div id="testinsection_file">
+          <label for="upload_file">File Upload</label>
+          <input type="file" class="upload-hidden" id="upload_file" accept="image/*" required = true>
+        </div>
 
-            document.querySelector("#upload_file").addEventListener("change", (changeEvent) => {
+        <script>
+        const reader = new FileReader();
+        reader.onload = (readerEvent) => {
+          document.querySelector("#img_section").setAttribute("src", readerEvent.target.result);
+        };
+        document.querySelector("#upload_file").addEventListener("change", (changeEvent) => {
+          const imgFile = changeEvent.target.files[0];
+          reader.readAsDataURL(imgFile);
+        })
+        </script>
 
-              const imgFile = changeEvent.target.files[0];
-              reader.readAsDataURL(imgFile);
-            })
-
-          </script> <br>
-          <input type="button" value="spring" onclick="f1();">
-          <input type="button" value="summer" onclick="f2();">
-          <input type="button" value="fall" onclick="f3();">
-          <input type="button" value="winter" onclick="f4();">
-          <div>
-            나에게 어울리는 계절은? <br>
-            <a href="Spring.html">봄</a> <br>
-            <a href="Summer.html">여름</a> <br>
-            <a href="Autumn.html">가을</a> <br>
-            <a href="Winter.html">겨울</a> <br>
-          </div>
+        <h3>Choose the background where your face looks the brightest!</h3>
+        <div style="padding:15px;">
+          <button class="testinsection_btn" type="button" name="button" onclick="select()">Select!</button>
         </div>
       </section>
     </div>
@@ -156,7 +102,6 @@
         <label><b>Tel :</b> 010-8620-5458</label><br>
         <label><b>Email :</b> jijking1209@naver.com</label>
       </div>
-
     </footer>
 
   </body>
