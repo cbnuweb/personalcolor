@@ -47,7 +47,7 @@ function changebg(id,test){
   }
 }
 
-function select(){
+function select_image(){
   var imgsrc=window.getComputedStyle(document.querySelector(".testinsection_image")).backgroundImage;
   var temp=imgsrc.split('img/t');
   var temp2=temp[1];
