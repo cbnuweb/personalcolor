@@ -32,7 +32,7 @@ Based on the tendencies that people are interested in beauty.
 
 3. Characteristics
 
--Features for each personal color
+- Features for each personal color
 
 4. Match
 
